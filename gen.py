@@ -5,11 +5,9 @@
 #- * -coding: utf - 8 - * -
 
 import random
-import numpy as np
 
 COLL_OBS = ["*", "-", "_", "A",
             "B", "C"]  # Коллекция припятствий
-
 
 class Gen():
     ''' Класс генераторов'''
