@@ -7,31 +7,47 @@
 import random
 import header
 
+
 class Gen():
     ''' Класс генераторов'''
 
     def rand_map_gen(self):
-        
-        gen_map = list()
 
-        for i in range(0, 150, 1):
+        gen_map = list()  # ПЕРЕМЕННАЯ СОДЕРЖАЩАЯ КАРТУ
 
-            k = 0
-            tumb = True
-            tmp_str = ""
+        for i in range(0, 150, 1):  # Цикл генерации карты
 
-            while tumb:
+            lucky = random.randint(1, 100)
+            k = 0  # Номер символа в строке
+            tumb = True  # Тумблер
+            tmp_str = ""  # Временная строка
 
-                if k == 0:
+            while tumb:  # Цикл генерации строки
+
+                if k == 0:  # Проверка на надобность стенки
                     tmp_str += "|"
 
+                old_lucky = lucky
+                # Вероятность появления препятствия
                 lucky = random.randint(1, 100)
 
-                if lucky <= 50:
-                    tmp_str += random.choice(header)
+                if lucky <= 50 and old_lucky > 50:  # Проверка вероятности
+                    tmp_str += random.choice(header.COLL_OBS)
 
-                
+                else:
+                    tmp_str += " "
+
+                if len(tmp_str) >= 12:
+                    tmp_str = tmp_str[:11]
+                    tmp_str += "|"
+                    tumb = False
+                    
+                k += 1
+
+            gen_map.append(tmp_str)
+
+        return gen_map
 
 if __name__ == "__main__":
     TMP_CLASS = Gen()
-    TMP = TMP_CLASS.rand_map_gen()
+    print(TMP_CLASS.rand_map_gen())
