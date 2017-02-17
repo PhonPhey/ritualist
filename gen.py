@@ -46,6 +46,7 @@ class Gen():
                 k += 1
 
             gen_map.append(tmp_str)
+        print(gen_map)
         return gen_map
 
 if __name__ == "__main__":
