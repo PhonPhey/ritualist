@@ -5,7 +5,7 @@
 #- * -coding: utf - 8 - * -
 
 import random
-
+import header
 
 class Gen():
     ''' Класс генераторов'''
@@ -21,13 +21,14 @@ class Gen():
             tmp_str = ""
 
             while tumb:
-                
+
                 if k == 0:
                     tmp_str += "|"
 
                 lucky = random.randint(1, 100)
 
                 if lucky <= 50:
+                    tmp_str += random.choice(header)
 
                 
 
