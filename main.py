@@ -9,6 +9,7 @@ from pygame import *
 import gen
 import header
 import player
+import pl_obs as plat
 
 
 def main():
@@ -34,10 +35,14 @@ def main():
 
     timer = pygame.time.Clock()  # Создание  таймера
 
+    entities = pygame.sprite.Group() # Все объекты
+    platforms = list() # то, во что мы будем врезаться или опираться
+    entities.add(hero)
+
     while 1:  # Основной цикл программы
         timer.tick(60)
         x = y = 0
-        
+
         for i in pygame.event.get():
             # Обрабатываем события
             if i.type == QUIT:
@@ -59,10 +64,9 @@ def main():
         for row in _map:  # вся строка
             for col in row:  # каждый символ
                 if col == "|":
-                    # создаем блок, заливаем его цветом и рисеум его
-                    pf = pygame.Surface(header.PLATFORM)
-                    pf.fill(pygame.Color(header.PLATFORM_COLOR))
-                    screen.blit(pf, (x, y))
+                    pf = plat.Platform(x, y)
+                    entities.add(pf)
+                    platforms.append(pf)
 
                 # Блоки платформы ставятся на ширине блоков
                 x += header.PLATFORM_WIDTH
