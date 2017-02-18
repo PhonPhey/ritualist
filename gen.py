@@ -58,9 +58,10 @@ class Gen():
         for row in gen_map:  # вся строка
             for col in row:  # каждый символ
                 if col == "|":
-                    # создаем блок, заливаем его цветом и рисеум его
                     wall = arcade.arcade.load_texture(
-                        "res/texture/hell_stone_wall.jpeg")
+                        "res/texture/hell_stone_wall.jpeg")  # Загружаем текстуру
+
+                    # Рисаем стены с текстурой, которую загрузили ранее
                     arcade.draw_texture_rectangle(
                         x_coor, y_coor, header.WIN_WIDTH * header.TEXTURE_WIDTH_SCALE,
                         header.WIN_HEIGHT * header.TEXTURE_HEIGHT_SCALE, wall)
