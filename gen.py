@@ -5,7 +5,8 @@
 #- * -coding: utf - 8 - * -
 
 import random
-import header
+import base_const
+import text_sprite_const
 import arcade
 
 
@@ -35,7 +36,7 @@ class Gen():
                 lucky = random.randint(1, 100)
 
                 if lucky <= 50 and old_lucky > 50:  # Проверка вероятности
-                    tmp_str += random.choice(header.COLL_OBS)
+                    tmp_str += random.choice(base_const.COLL_OBS)
 
                 else:
                     tmp_str += " "
@@ -58,16 +59,15 @@ class Gen():
         for row in gen_map:  # вся строка
             for col in row:  # каждый символ
                 if col == "|":
-                    wall = arcade.arcade.load_texture(
-                        "res/texture/hell_stone_wall.jpeg")  # Загружаем текстуру
+                    wall = arcade.arcade.load_texture(text_sprite_const.STONE_WALL)  # Загружаем текстуру
 
                     # Рисаем стены с текстурой, которую загрузили ранее
                     arcade.draw_texture_rectangle(
-                        x_coor, y_coor, header.WIN_WIDTH * header.TEXTURE_WIDTH_SCALE,
-                        header.WIN_HEIGHT * header.TEXTURE_HEIGHT_SCALE, wall)
+                        x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_WIDTH_SCALE,
+                        base_const.WIN_HEIGHT * base_const.TEXTURE_HEIGHT_SCALE, wall)
 
-                x_coor += header.PLATFORM_WIDTH  # блоки платформы ставятся на ширине блоков
-            y_coor += header.PLATFORM_HEIGHT  # то же самое и с высотой
+                x_coor += base_const.PLATFORM_WIDTH  # блоки платформы ставятся на ширине блоков
+            y_coor += base_const.PLATFORM_HEIGHT  # то же самое и с высотой
             x_coor = 16  # на каждой новой строчке начинаем с нуля
 
 

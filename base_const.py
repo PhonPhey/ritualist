@@ -1,4 +1,4 @@
-'''Header file with const'''
+'''Header file with base const'''
 
 WIN_TITLE = "Ritualist"
 WIN_WIDTH = 414  # Ширина создаваемого окна
