@@ -1,13 +1,13 @@
 '''Header file with base const'''
 
 WIN_TITLE = "Ritualist"
-WIN_WIDTH = 414  # Ширина создаваемого окна
+WIN_WIDTH = 418  # Ширина создаваемого окна
 WIN_HEIGHT = 600  # Высота
 # Группируем ширину и высоту окна в одну переменную
 DISPLAY = (WIN_WIDTH, WIN_HEIGHT)
 WIN_BACKGROUND_COLOR = (27, 54, 20)
-PLATFORM_WIDTH = 32
-PLATFORM_HEIGHT = 32
+PLATFORM_WIDTH = 35
+PLATFORM_HEIGHT = 35
 # Группируем ширину и высоту платформы в список
 PLATFORM = (PLATFORM_WIDTH, PLATFORM_HEIGHT)
 PLATFORM_COLOR = (255, 98, 98)

@@ -41,8 +41,8 @@ class Gen():
                 else:
                     tmp_str += " "
 
-                if len(tmp_str) >= 13:
-                    tmp_str = tmp_str[:12]
+                if len(tmp_str) >= 12:
+                    tmp_str = tmp_str[:11]
                     tmp_str += "|"
                     tumb = False
 
@@ -59,7 +59,8 @@ class Gen():
         for row in gen_map:  # вся строка
             for col in row:  # каждый символ
                 if col == "|":
-                    wall = arcade.arcade.load_texture(text_sprite_const.STONE_WALL)  # Загружаем текстуру
+                    wall = arcade.arcade.load_texture(
+                        text_sprite_const.STONE_WALL)  # Загружаем текстуру
 
                     # Рисаем стены с текстурой, которую загрузили ранее
                     arcade.draw_texture_rectangle(
