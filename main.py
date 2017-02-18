@@ -11,8 +11,8 @@ import header  # Импорт заголовочного файла
 def main():
     ''' Main function '''
     # Открываем окно с задаными параметрами высоты, ширины и заголовка
-    arcade.open_window(header.WIN_TITLE, header.WIN_HEIGHT,
-                       header.WIN_WIDTH)
+    arcade.open_window(header.WIN_TITLE, header.WIN_WIDTH,
+                       header.WIN_HEIGHT)
 
     arcade.set_background_color(
         header.WIN_BACKGROUND_COLOR)  # Задаём цвет фона окна

@@ -40,8 +40,8 @@ class Gen():
                 else:
                     tmp_str += " "
 
-                if len(tmp_str) >= 20:
-                    tmp_str = tmp_str[:19]
+                if len(tmp_str) >= 13:
+                    tmp_str = tmp_str[:12]
                     tmp_str += "|"
                     tumb = False
 
@@ -59,8 +59,11 @@ class Gen():
             for col in row:  # каждый символ
                 if col == "|":
                     # создаем блок, заливаем его цветом и рисеум его
-                    arcade.draw_rectangle_filled(
-                        x_coor, y_coor, header.PLATFORM_WIDTH, header.PLATFORM_HEIGHT, header.PLATFORM_COLOR)
+                    wall = arcade.arcade.load_texture(
+                        "res/texture/hell_stone_wall.jpeg")
+                    arcade.draw_texture_rectangle(
+                        x_coor, y_coor, header.WIN_WIDTH * header.TEXTURE_WIDTH_SCALE,
+                        header.WIN_HEIGHT * header.TEXTURE_HEIGHT_SCALE, wall)
 
                 x_coor += header.PLATFORM_WIDTH  # блоки платформы ставятся на ширине блоков
             y_coor += header.PLATFORM_HEIGHT  # то же самое и с высотой
