@@ -1,16 +1,27 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
-#- * -coding: ascii- * -
+#- * -coding: utf-8- * -
 
-# Импортируем библиотеку pygame
+import pyglet  # Импорт pyglet
+import arcade  # Ипортируем библиотеку arcade(построенную на pyglet)
 
-import pyglet
-import gen
-import header
+import gen  # Импорт генератора карты
+import header  # Импорт заголовочного файла
 
 
 def main():
-    pass
+    ''' Main function '''
+    arcade.open_window(header.WIN_TITLE, header.WIN_HEIGHT,
+                       header.WIN_WIDTH)  # Открываем окно с задаными параметрами высоты, ширины и заголовка
+
+    arcade.set_background_color(
+        header.WIN_BACKGROUND_COLOR)  # Задаём цвет фона окна
+
+    arcade.start_render()  # Начинаем рендер в открытом окне
+
+    arcade.finish_render()  # Заканчиваем рендер в открытом окне
+
+    arcade.run()  # Запускаем приложение
 
 if __name__ == "__main__":
-    main()
+    main()  # Инициализируем основную функцию
