@@ -2,7 +2,7 @@
 
 WIN_TITLE = "Ritualist"
 WIN_WIDTH = 383  # Ширина создаваемого окна
-WIN_HEIGHT = 640  # Высота
+WIN_HEIGHT = 700  # Высота
 # Группируем ширину и высоту окна в одну переменную
 DISPLAY = (WIN_WIDTH, WIN_HEIGHT)
 WIN_BACKGROUND_COLOR = (27, 54, 20)

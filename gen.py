@@ -6,6 +6,7 @@
 
 import random
 import header
+import arcade
 
 
 class Gen():
@@ -39,8 +40,8 @@ class Gen():
                 else:
                     tmp_str += " "
 
-                if len(tmp_str) >= 12:
-                    tmp_str = tmp_str[:11]
+                if len(tmp_str) >= 20:
+                    tmp_str = tmp_str[:19]
                     tmp_str += "|"
                     tumb = False
 
@@ -49,6 +50,22 @@ class Gen():
             gen_map.append(tmp_str)
 
         return gen_map
+
+    def build_map(self, gen_map):
+        ''' Build map on text map '''
+        x_coor = 16
+        y_coor = 0
+        for row in gen_map:  # вся строка
+            for col in row:  # каждый символ
+                if col == "|":
+                    # создаем блок, заливаем его цветом и рисеум его
+                    arcade.draw_rectangle_filled(
+                        x_coor, y_coor, header.PLATFORM_WIDTH, header.PLATFORM_HEIGHT, header.PLATFORM_COLOR)
+
+                x_coor += header.PLATFORM_WIDTH  # блоки платформы ставятся на ширине блоков
+            y_coor += header.PLATFORM_HEIGHT  # то же самое и с высотой
+            x_coor = 16  # на каждой новой строчке начинаем с нуля
+
 
 if __name__ == "__main__":
     TMP_CLASS = Gen()
