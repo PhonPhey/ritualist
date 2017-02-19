@@ -29,7 +29,7 @@ class Gen():
             while tumb:  # Цикл генерации строки
 
                 if i == 0:  # Проверка на надобность стенки
-                    tmp_str += "|"
+                    tmp_str += "\\"
 
                 old_lucky = lucky
                 # Вероятность появления препятствия
@@ -43,7 +43,7 @@ class Gen():
 
                 if len(tmp_str) >= 12:
                     tmp_str = tmp_str[:11]
-                    tmp_str += "|"
+                    tmp_str += "/"
                     tumb = False
 
                 i += 1
@@ -58,14 +58,31 @@ class Gen():
         y_coor = 0
         for row in gen_map:  # вся строка
             for col in row:  # каждый символ
-                if col == "|":
+                if col == "\\":
                     wall = arcade.arcade.load_texture(
                         text_sprite_const.STONE_WALL)  # Загружаем текстуру
 
                     # Рисаем стены с текстурой, которую загрузили ранее
                     arcade.draw_texture_rectangle(
-                        x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_WIDTH_SCALE,
-                        base_const.WIN_HEIGHT * base_const.TEXTURE_HEIGHT_SCALE, wall)
+                        x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_WALL_WIDTH_SCALE,
+                        base_const.WIN_HEIGHT * base_const.TEXTURE_WALL_HEIGHT_SCALE, wall, 180)
+                
+                elif col == "/":
+                    wall = arcade.load_texture(
+                        text_sprite_const.STONE_WALL)  # Загружаем текстуру
+
+                    # Рисаем стены с текстурой, которую загрузили ранее
+                    arcade.draw_texture_rectangle(
+                        x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_WALL_WIDTH_SCALE,
+                        base_const.WIN_HEIGHT * base_const.TEXTURE_WALL_HEIGHT_SCALE, wall)
+
+                elif col == " ":
+                    floor = arcade.load_texture(
+                        text_sprite_const.STONE_FLOOR)  # Загружаем текстуру
+
+                    arcade.draw_texture_rectangle(
+                        x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_FLOOR_WIDTH_SCALE,
+                        base_const.WIN_HEIGHT * base_const.TEXTURE_FLOOR_HEIGHT_SCALE, floor)
 
                 x_coor += base_const.PLATFORM_WIDTH  # блоки платформы ставятся на ширине блоков
             y_coor += base_const.PLATFORM_HEIGHT  # то же самое и с высотой

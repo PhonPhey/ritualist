@@ -1,3 +1,5 @@
+''' Main module of Ritualist '''
+
 #!/usr/bin/python3
 
 #- * -coding: utf-8- * -
