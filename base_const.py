@@ -24,7 +24,7 @@ COLL_OBS = ["*", "-", "_", "A",
 TEXTURE_WALL_WIDTH_SCALE = 0.08
 TEXTURE_WALL_HEIGHT_SCALE = 0.07
 
-# Масштаб для пола
+# Масштаб для пола и припятствий
 TEXTURE_FLOOR_WIDTH_SCALE = 0.09
 TEXTURE_FLOOR_HEIGHT_SCALE = 0.07
 
