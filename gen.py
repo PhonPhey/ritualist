@@ -3,12 +3,21 @@
 #!/usr/bin/env python3
 
 #- * -coding: utf - 8 - * -
+import log
 
-import random
-import base_const
-import text_sprite_const
-import arcade
+try:
+    import random
+    import base_const
+    import text_sprite_const
+    import arcade
+    import log
+    
+except ImportError:
+    
+    log.logging.critical('Ошибка импорта')
 
+else: 
+    log.logging.info('Импорт прошел успешно')
 
 class Gen():
     ''' Класс генераторов'''
@@ -51,6 +60,7 @@ class Gen():
             gen_map.append(tmp_str)
 
         return gen_map
+        log.logging.info('Карта создана') 
 
     def build_map(self, gen_map):
         ''' Build map on text map '''
@@ -70,7 +80,7 @@ class Gen():
                 elif col == "/":
                     wall = arcade.load_texture(
                         text_sprite_const.STONE_WALL)  # Загружаем текстуру
-
+              
                     # Рисаем стены с текстурой, которую загрузили ранее
                     arcade.draw_texture_rectangle(
                         x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_WALL_WIDTH_SCALE,
@@ -87,6 +97,14 @@ class Gen():
                 x_coor += base_const.PLATFORM_WIDTH  # блоки платформы ставятся на ширине блоков
             y_coor += base_const.PLATFORM_HEIGHT  # то же самое и с высотой
             x_coor = 16  # на каждой новой строчке начинаем с нуля
+
+    log.logging.info('Загрузка текстуры')
+
+    log.logging.info('Прорисовка карты с текстурами')  
+
+    log.logging.info('Карта готова') 
+
+    log.logging.info('ПЕРЕХОД К ОСНОВНОМУ МОДУЛЮ') 
 
 
 if __name__ == "__main__":
