@@ -1,0 +1,36 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+COLL_OBS	base_const.py	/^COLL_OBS = ["*", "-", "_", "A",$/;"	kind:variable	line:20
+COLOR	base_const.py	/^COLOR = "#888888"$/;"	kind:variable	line:19
+DISPLAY	base_const.py	/^DISPLAY = (WIN_WIDTH, WIN_HEIGHT)$/;"	kind:variable	line:7
+Gen	gen.py	/^class Gen():$/;"	kind:class	line:13
+HEIGHT	base_const.py	/^HEIGHT = 32$/;"	kind:variable	line:16
+Log.py	Log.py	1;"	kind:file	line:1
+MOVE_SPEED	base_const.py	/^MOVE_SPEED = 7$/;"	kind:variable	line:14
+PLATFORM	base_const.py	/^PLATFORM = (PLATFORM_WIDTH, PLATFORM_HEIGHT)$/;"	kind:variable	line:12
+PLATFORM_COLOR	base_const.py	/^PLATFORM_COLOR = (255, 98, 98)$/;"	kind:variable	line:13
+PLATFORM_HEIGHT	base_const.py	/^PLATFORM_HEIGHT = 35$/;"	kind:variable	line:10
+PLATFORM_WIDTH	base_const.py	/^PLATFORM_WIDTH = 35$/;"	kind:variable	line:9
+SPRITE	base_const.py	/^SPRITE = (WIDTH, HEIGHT)$/;"	kind:variable	line:18
+STONE_WALL	text_sprite_const.py	/^STONE_WALL = "res\/texture\/stone_wall.jpeg" # Каменная стена$/;"	kind:variable	line:3
+TEXTURE_HEIGHT_SCALE	base_const.py	/^TEXTURE_HEIGHT_SCALE = 0.06$/;"	kind:variable	line:23
+TEXTURE_WIDTH_SCALE	base_const.py	/^TEXTURE_WIDTH_SCALE = 0.08$/;"	kind:variable	line:22
+TMP_CLASS	gen.py	/^    TMP_CLASS = Gen()$/;"	kind:variable	line:76
+WIDTH	base_const.py	/^WIDTH = 32$/;"	kind:variable	line:15
+WIN_BACKGROUND_COLOR	base_const.py	/^WIN_BACKGROUND_COLOR = (27, 54, 20)$/;"	kind:variable	line:8
+WIN_HEIGHT	base_const.py	/^WIN_HEIGHT = 600  # Высота$/;"	kind:variable	line:5
+WIN_TITLE	base_const.py	/^WIN_TITLE = "Ritualist"$/;"	kind:variable	line:3
+WIN_WIDTH	base_const.py	/^WIN_WIDTH = 418  # Ширина создаваемого окна$/;"	kind:variable	line:4
+base_const.py	base_const.py	1;"	kind:file	line:1
+build_map	gen.py	/^    def build_map(self, gen_map):$/;"	kind:member	line:55
+gen.py	gen.py	1;"	kind:file	line:1
+logger	Log.py	/^logger = logging.getLogger('Denis')$/;"	kind:variable	line:6
+main	Log.py	/^def main():$/;"	kind:function	line:10
+main	main.py	/^def main():$/;"	kind:function	line:11
+main.py	main.py	1;"	kind:file	line:1
+rand_map_gen	gen.py	/^    def rand_map_gen(self):$/;"	kind:member	line:16
+text_sprite_const.py	text_sprite_const.py	1;"	kind:file	line:1
