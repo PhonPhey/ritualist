@@ -100,11 +100,11 @@ class Gen():
 
     log.logging.info('Загрузка текстуры')
 
-    log.logging.info('Прорисовка карты с текстурами')  
+    log.logging.info('Прорисовка карты с текстурами')
 
-    log.logging.info('Карта готова') 
+    log.logging.info('Карта готова')
 
-    log.logging.info('ПЕРЕХОД К ОСНОВНОМУ МОДУЛЮ') 
+    log.logging.info('ПЕРЕХОД К ОСНОВНОМУ МОДУЛЮ')
 
 
 if __name__ == "__main__":
