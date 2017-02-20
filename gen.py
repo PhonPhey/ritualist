@@ -3,7 +3,6 @@
 #!/usr/bin/env python3
 
 #- * -coding: utf - 8 - * -
-import log
 
 try:
     import random
@@ -11,13 +10,15 @@ try:
     import text_sprite_const
     import arcade
     import log
-    
+    import os
+
 except ImportError:
-    
+
     log.logging.critical('Ошибка импорта')
 
-else: 
+else:
     log.logging.info('Импорт прошел успешно')
+
 
 class Gen():
     ''' Класс генераторов'''
@@ -28,7 +29,8 @@ class Gen():
         gen_map = list()  # ПЕРЕМЕННАЯ СОДЕРЖАЩАЯ КАРТУ
 
         for _ in range(0, 150, 1):  # Цикл генерации карты
-
+            seed = os.urandom(10)
+            random.seed(seed) # Закладываем семя генерации
             # Вероятность появления препятствия
             lucky = random.randint(1, 100)
             i = 0  # Номер символа в строке
@@ -44,12 +46,12 @@ class Gen():
                 # Вероятность появления препятствия
                 lucky = random.randint(1, 100)
 
-                if lucky <= 50 and old_lucky > 50:  # Проверка вероятности
+                if lucky <= 32 and old_lucky > 32:  # Проверка вероятности
                     tmp_str += random.choice(base_const.COLL_OBS)
 
                 else:
                     tmp_str += " "
-                
+
                 if len(tmp_str) >= 12:
                     tmp_str = tmp_str[:11]
                     tmp_str += "/"
@@ -59,8 +61,8 @@ class Gen():
 
             gen_map.append(tmp_str)
 
+        log.logging.info('Карта создана')
         return gen_map
-        log.logging.info('Карта создана') 
 
     def build_map(self, gen_map):
         ''' Build map on text map '''
@@ -76,11 +78,11 @@ class Gen():
                     arcade.draw_texture_rectangle(
                         x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_WALL_WIDTH_SCALE,
                         base_const.WIN_HEIGHT * base_const.TEXTURE_WALL_HEIGHT_SCALE, wall, 180)
-                
+
                 elif col == "/":
                     wall = arcade.load_texture(
                         text_sprite_const.STONE_WALL)  # Загружаем текстуру
-              
+
                     # Рисаем стены с текстурой, которую загрузили ранее
                     arcade.draw_texture_rectangle(
                         x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_WALL_WIDTH_SCALE,
@@ -105,6 +107,14 @@ class Gen():
                 elif col == "*":
                     floor = arcade.load_texture(
                         text_sprite_const.STONE_MAGIC_TRAPDOOR)  # Загружаем текстуру
+
+                    arcade.draw_texture_rectangle(
+                        x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_FLOOR_WIDTH_SCALE,
+                        base_const.WIN_HEIGHT * base_const.TEXTURE_FLOOR_HEIGHT_SCALE, floor)
+
+                elif col == "A":
+                    floor = arcade.load_texture(
+                        text_sprite_const.STONE_ACID_TRAPDOOR)  # Загружаем текстуру
 
                     arcade.draw_texture_rectangle(
                         x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_FLOOR_WIDTH_SCALE,

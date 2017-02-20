@@ -8,3 +8,7 @@ STONE_TRAPDOOR = "res/texture/stone_trapdoor.jpeg"  # Ловушка в каме
 
 # Магическая Ловушка в каменном полу
 STONE_MAGIC_TRAPDOOR = "/home/phonphey/Ritualist/res/texture/stone_magic_trapdoor.jpeg"
+
+
+# Кислотная Ловушка в каменном полу
+STONE_ACID_TRAPDOOR = "/home/phonphey/Ritualist/res/texture/stone_acid_trapdoor.jpeg"
