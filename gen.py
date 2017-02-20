@@ -120,6 +120,14 @@ class Gen():
                         x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_FLOOR_WIDTH_SCALE,
                         base_const.WIN_HEIGHT * base_const.TEXTURE_FLOOR_HEIGHT_SCALE, floor)
 
+                elif col == "-":
+                    floor = arcade.load_texture(
+                        text_sprite_const.STONE_ILLUSION_TRAPDOOR)  # Загружаем текстуру
+
+                    arcade.draw_texture_rectangle(
+                        x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_FLOOR_WIDTH_SCALE,
+                        base_const.WIN_HEIGHT * base_const.TEXTURE_FLOOR_HEIGHT_SCALE, floor)
+
                 x_coor += base_const.PLATFORM_WIDTH  # блоки платформы ставятся на ширине блоков
             y_coor += base_const.PLATFORM_HEIGHT  # то же самое и с высотой
             x_coor = 16  # на каждой новой строчке начинаем с нуля
