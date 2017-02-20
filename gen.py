@@ -49,7 +49,7 @@ class Gen():
 
                 else:
                     tmp_str += " "
-
+                
                 if len(tmp_str) >= 12:
                     tmp_str = tmp_str[:11]
                     tmp_str += "/"
@@ -89,6 +89,22 @@ class Gen():
                 elif col == " ":
                     floor = arcade.load_texture(
                         text_sprite_const.STONE_FLOOR)  # Загружаем текстуру
+
+                    arcade.draw_texture_rectangle(
+                        x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_FLOOR_WIDTH_SCALE,
+                        base_const.WIN_HEIGHT * base_const.TEXTURE_FLOOR_HEIGHT_SCALE, floor)
+
+                elif col == "_":
+                    floor = arcade.load_texture(
+                        text_sprite_const.STONE_TRAPDOOR)  # Загружаем текстуру
+
+                    arcade.draw_texture_rectangle(
+                        x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_FLOOR_WIDTH_SCALE,
+                        base_const.WIN_HEIGHT * base_const.TEXTURE_FLOOR_HEIGHT_SCALE, floor)
+
+                elif col == "*":
+                    floor = arcade.load_texture(
+                        text_sprite_const.STONE_MAGIC_TRAPDOOR)  # Загружаем текстуру
 
                     arcade.draw_texture_rectangle(
                         x_coor, y_coor, base_const.WIN_WIDTH * base_const.TEXTURE_FLOOR_WIDTH_SCALE,

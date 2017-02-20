@@ -1,7 +1,7 @@
 '''Header file with base const'''
 
 WIN_TITLE = "Ritualist"
-WIN_WIDTH = 475 # Ширина создаваемого окна
+WIN_WIDTH = 475  # Ширина создаваемого окна
 WIN_HEIGHT = 600  # Высота
 # Группируем ширину и высоту окна в одну переменную
 DISPLAY = (WIN_WIDTH, WIN_HEIGHT)
@@ -17,8 +17,7 @@ HEIGHT = 32
 # Группируем ширину и высоту спрайта в список
 SPRITE = (WIDTH, HEIGHT)
 COLOR = "#888888"
-COLL_OBS = ["*", "-", "_", "A",
-            "B", "C"]  # Коллекция припятствий
+COLL_OBS = ["*", "-", "_", "A"]  # Коллекция припятствий
 
 # Масштаб для стен
 TEXTURE_WALL_WIDTH_SCALE = 0.08
@@ -27,4 +26,3 @@ TEXTURE_WALL_HEIGHT_SCALE = 0.07
 # Масштаб для пола и припятствий
 TEXTURE_FLOOR_WIDTH_SCALE = 0.09
 TEXTURE_FLOOR_HEIGHT_SCALE = 0.07
-

@@ -4,8 +4,6 @@
 
 #- * -coding: utf-8- * -
 
-import log # Импорт Логгера
-
 
 
 try:
@@ -13,12 +11,12 @@ try:
     import gen  # Импорт генератора карты
     import base_const  # Импорт заголовочного файла
     import log # Импорт Логгера
-    
+
 except ImportError:
-    
+
     log.logging.critical('Ошибка импорта')
 
-else: 
+else:
     log.logging.info('Импорт прошел успешно')
 
 def main():
@@ -31,11 +29,11 @@ def main():
         base_const.WIN_BACKGROUND_COLOR)  # Задаём цвет фона окна
 
     log.logging.info('Цвет фона задан')
-    
+
     _gen = gen.Gen()  # Создаём экземпляр класса генераторов
 
     log.logging.info('Экземпляр класса генераторов создан')
-    
+
     arcade.start_render()  # Начинаем рендер в открытом окне
 
     log.logging.info('Начат рендер в открытом окне ')
