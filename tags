@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+COLL_OBS	base_const.py	/^COLL_OBS = ["*", "-", "_", "A"]  # Коллекция припятствий$/;"	kind:variable	line:20
+COLOR	base_const.py	/^COLOR = "#888888"$/;"	kind:variable	line:19
+DISPLAY	base_const.py	/^DISPLAY = (WIN_WIDTH, WIN_HEIGHT)$/;"	kind:variable	line:7
+Gen	gen.py	/^class Gen():$/;"	kind:class	line:23
+HEIGHT	base_const.py	/^HEIGHT = 32$/;"	kind:variable	line:16
+LOGGER	log.py	/^LOGGER = logging.getLogger('Denis')  # ввод ненужной переменной$/;"	kind:variable	line:5
+MOVE_SPEED	base_const.py	/^MOVE_SPEED = 7$/;"	kind:variable	line:14
+Mus	music.py	/^class Mus():$/;"	kind:class	line:7
+PLATFORM	base_const.py	/^PLATFORM = (PLATFORM_WIDTH, PLATFORM_HEIGHT)$/;"	kind:variable	line:12
+PLATFORM_COLOR	base_const.py	/^PLATFORM_COLOR = (255, 98, 98)$/;"	kind:variable	line:13
+PLATFORM_HEIGHT	base_const.py	/^PLATFORM_HEIGHT = 40$/;"	kind:variable	line:10
+PLATFORM_WIDTH	base_const.py	/^PLATFORM_WIDTH = 40$/;"	kind:variable	line:9
+SOUND1	sound_const.py	/^SOUND1 = "res\/sound\/den.ogg"$/;"	kind:variable	line:3
+SOUND10	sound_const.py	/^SOUND10 = "res\/sound\/den10.ogg"/;"	kind:variable	line:12
+SOUND2	sound_const.py	/^SOUND2 = "res\/sound\/den2.ogg"$/;"	kind:variable	line:4
+SOUND3	sound_const.py	/^SOUND3 = "res\/sound\/den3.ogg"$/;"	kind:variable	line:5
+SOUND4	sound_const.py	/^SOUND4 = "res\/sound\/den4.ogg"$/;"	kind:variable	line:6
+SOUND5	sound_const.py	/^SOUND5 = "res\/sound\/den5.ogg"$/;"	kind:variable	line:7
+SOUND6	sound_const.py	/^SOUND6 = "res\/sound\/den6.ogg"$/;"	kind:variable	line:8
+SOUND7	sound_const.py	/^SOUND7 = "res\/sound\/den7.ogg"$/;"	kind:variable	line:9
+SOUND8	sound_const.py	/^SOUND8 = "res\/sound\/den8.ogg"$/;"	kind:variable	line:10
+SOUND9	sound_const.py	/^SOUND9 = "res\/sound\/den9.ogg"$/;"	kind:variable	line:11
+SPRITE	base_const.py	/^SPRITE = (WIDTH, HEIGHT)$/;"	kind:variable	line:18
+STONE_ACID_TRAPDOOR	text_sprite_const.py	/^STONE_ACID_TRAPDOOR = "res\/texture\/stone_acid_trapdoor.jpeg"$/;"	kind:variable	line:14
+STONE_FLOOR	text_sprite_const.py	/^STONE_FLOOR = "res\/texture\/stone_floor.jpeg"  # Каменный пол$/;"	kind:variable	line:5
+STONE_ILLUSION_TRAPDOOR	text_sprite_const.py	/^STONE_ILLUSION_TRAPDOOR = "res\/texture\/stone_illusion_trapdoor.jpeg"/;"	kind:variable	line:17
+STONE_MAGIC_TRAPDOOR	text_sprite_const.py	/^STONE_MAGIC_TRAPDOOR = "res\/texture\/stone_magic_trapdoor.jpeg"$/;"	kind:variable	line:10
+STONE_TRAPDOOR	text_sprite_const.py	/^STONE_TRAPDOOR = "res\/texture\/stone_trapdoor.jpeg"  # Ловушка в каменном полу$/;"	kind:variable	line:7
+STONE_WALL	text_sprite_const.py	/^STONE_WALL = "res\/texture\/stone_wall.jpeg"  # Каменная стена$/;"	kind:variable	line:3
+TEXTURE_FLOOR_HEIGHT_SCALE	base_const.py	/^TEXTURE_FLOOR_HEIGHT_SCALE = 0.07$/;"	kind:variable	line:28
+TEXTURE_FLOOR_WIDTH_SCALE	base_const.py	/^TEXTURE_FLOOR_WIDTH_SCALE = 0.09$/;"	kind:variable	line:27
+TEXTURE_WALL_HEIGHT_SCALE	base_const.py	/^TEXTURE_WALL_HEIGHT_SCALE = 0.07$/;"	kind:variable	line:24
+TEXTURE_WALL_WIDTH_SCALE	base_const.py	/^TEXTURE_WALL_WIDTH_SCALE = 0.08$/;"	kind:variable	line:23
+TMP_CLASS	gen.py	/^    TMP_CLASS = Gen()$/;"	kind:variable	line:145
+TMP_CLASS	music.py	/^    TMP_CLASS = Mus()$/;"	kind:variable	line:34
+WIDTH	base_const.py	/^WIDTH = 32$/;"	kind:variable	line:15
+WIN_BACKGROUND_COLOR	base_const.py	/^WIN_BACKGROUND_COLOR = (27, 54, 20)$/;"	kind:variable	line:8
+WIN_HEIGHT	base_const.py	/^WIN_HEIGHT = 600  # Высота$/;"	kind:variable	line:5
+WIN_TITLE	base_const.py	/^WIN_TITLE = "Ritualist"$/;"	kind:variable	line:3
+WIN_WIDTH	base_const.py	/^WIN_WIDTH = 475  # Ширина создаваемого окна$/;"	kind:variable	line:4
+base_const.py	base_const.py	1;"	kind:file	line:1
+build_map	gen.py	/^    def build_map(self, gen_map):$/;"	kind:member	line:67
+build_mus	music.py	/^    def build_mus(self, gen_mus):$/;"	kind:member	line:23
+format	log.py	/^    format='%(levelname)-8s [%(asctime)s] %(message)s', level=logging.DEBUG)$/;"	kind:variable	line:9
+gen.py	gen.py	1;"	kind:file	line:1
+log.py	log.py	1;"	kind:file	line:1
+main	main.py	/^def main():$/;"	kind:function	line:22
+main.py	main.py	1;"	kind:file	line:1
+music.py	music.py	1;"	kind:file	line:1
+rand_map_gen	gen.py	/^    def rand_map_gen(self):$/;"	kind:member	line:26
+rand_mus_gen	music.py	/^    def rand_mus_gen(self):$/;"	kind:member	line:9
+sound_const.py	sound_const.py	1;"	kind:file	line:1
+text_sprite_const.py	text_sprite_const.py	1;"	kind:file	line:1
