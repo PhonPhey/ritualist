@@ -3,10 +3,11 @@
 #!/usr/bin/python3
 
 #- * -coding: utf-8- * -
-
+import log
 
 
 try:
+    import music
     import arcade  # Ипортируем библиотеку arcade(построенную на pyglet)
     import gen  # Импорт генератора карты
     import base_const  # Импорт заголовочного файла
@@ -28,10 +29,9 @@ def main():
     arcade.set_background_color(
         base_const.WIN_BACKGROUND_COLOR)  # Задаём цвет фона окна
 
-    log.logging.info('Цвет фона задан')
-
     _gen = gen.Gen()  # Создаём экземпляр класса генераторов
 
+    log.logging.info('Цвет фона задан')
     log.logging.info('Экземпляр класса генераторов создан')
 
     arcade.start_render()  # Начинаем рендер в открытом окне
@@ -49,6 +49,8 @@ def main():
     log.logging.info('Приложение запущено успешно')
 
     arcade.run()  # Запускаем приложение
+
+
 
 if __name__ == "__main__":
     main()  # Инициализируем основную функцию
