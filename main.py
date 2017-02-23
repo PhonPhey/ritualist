@@ -12,6 +12,7 @@ try:
     import gen  # Импорт генератора карты
     import base_const  # Импорт заголовочного файла
     import log # Импорт Логгера
+    import text_sprite_const as tsc
 
 except ImportError:
 
@@ -39,6 +40,7 @@ def main():
     log.logging.info('Начат рендер в открытом окне ')
 
     _gen.build_map(_gen.rand_map_gen())  # генерируем ,cтроим и рисуем карту
+    tsc.ALL_SPRITES[1].draw()
 
     log.logging.info('Генерация и прорисовка карты')
 
